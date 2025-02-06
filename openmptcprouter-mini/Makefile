@@ -17,10 +17,8 @@ MY_DEPENDS := \
     mptcp       \
     unbound-daemon unbound-control unbound-anchor \
     netifd      \
-    luci-app-dsvpn \
     mc          \
     f2fs-tools \
-    openmptcprouter \
     dnsmasq-full \
     uhttpd \
     uhttpd-mod-ubus \
@@ -31,22 +29,17 @@ MY_DEPENDS := \
     libnetfilter-conntrack ip-full \
     iptables-mod-iface iptables-mod-ipmark iptables-mod-hashlimit iptables-mod-condition iptables-mod-trace iptables-mod-conntrack-extra iptables-mod-account \
     kmod-nf-nat kmod-nf-nathelper kmod-nf-nathelper-extra iptables-mod-extra \
-    iptables-mod-ipsec kmod-crypto-authenc kmod-ipsec kmod-ipsec4 kmod-ipsec6 kmod-ipt-ipsec \
-    wireless-tools \
+    iptables-mod-ipsec kmod-crypto-authenc kmod-ipsec kmod-ipsec4 kmod-ipt-ipsec \
     libiwinfo-lua \
     ca-bundle ca-certificates libustream-openssl \
-    luci-mod-admin-full luci-app-firewall luci-app-glorytun-tcp luci-app-glorytun-udp luci-app-shadowsocks-libev luci-app-unbound luci-theme-openmptcprouter luci-base \
-    luci-app-omr-tracker luci-app-omr-dscp \
-    luci-app-sqm sqm-scripts-extra \
-    luci-app-vnstat2 omr-quota luci-app-omr-quota \
-    luci-app-mptcp luci-app-openmptcprouter luci-app-omr-bypass luci-app-mail luci-app-upnp \
+    luci-mod-admin-full luci-app-firewall luci-app-unbound luci-theme-openmptcprouter luci-base \
+    luci-app-omr-tracker \
+    luci-app-vnstat2 \
+    luci-app-mptcp luci-app-mail luci-app-upnp \
     luci-app-opkg \
     luci-app-uhttpd \
     luci-mod-rpc rpcd-mod-rpcsys rpcd-mod-file rpcd-mod-iwinfo \
     luci-app-openvpn \
-    macvlan \
-    shadowsocks-libev-ss-server shadowsocks-libev-ss-tunnel \
-    omr-6in4 ip6tables-mod-nat luci-proto-ipv6 6to4 6in4 6rd ip6tables \
     iftop \
     htop \
     tcpdump \
@@ -74,10 +67,10 @@ MY_DEPENDS := \
     !TARGET_mvebu:kmod-usb-net-huawei-cdc-ncm !TARGET_mvebu:kmod-usb-net-rndis !TARGET_mvebu:kmod-usb-net-cdc-ether !TARGET_mvebu:kmod-usb-net-ipheth !TARGET_mvebu:usbmuxd \
     kmod-rt2800-usb kmod-rtl8xxxu kmod-rtl8192cu kmod-net-rtl8192su \
     !TARGET_mvebu:luci-proto-qmi wpad-basic kmod-mt7601u kmod-rtl8187 \
-    luci-app-mlvpn mlvpn 464xlat kmod-zram kmod-swconfig swconfig kmod-ipt-nat kmod-ipt-nat6 luci-app-https-dns-proxy kmod-tcp-nanqinlang iptables-mod-ipopt ss \
-    luci-app-acl block-mount blockd fstools luci-app-shutdown libwebp luci-proto-gre
+    464xlat kmod-zram kmod-swconfig swconfig kmod-ipt-nat luci-app-https-dns-proxy kmod-tcp-nanqinlang iptables-mod-ipopt ss \
+    luci-app-acl block-mount blockd fstools luci-app-shutdown libwebp
 
-OMR_SUPPORTED_LANGS := en
+OMR_SUPPORTED_LANGS := en ru
 
 define Package/$(PKG_NAME)
 SECTION:=OMR
